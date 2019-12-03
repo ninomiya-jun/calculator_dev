@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+main {
+    margin: 100px auto;
+    width: 112px;
+}
+.display {
+    display: flex;
+    height: 30px;
+}
+.display span {
+    display: flex;
+    justify-content: flex-end;
+    width: 30px;
+}
+.btn-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    width: 138px;
+}
+.btn {
+    height: 30px;
+    width: 30px;
+}
+.plus,
+.minus,
+.multiply,
+.divide,
+.equal {
+    height: 30px;
+    width: 30px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>電卓・計算機</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <meta name="description" content="">
+    <style type="text/css">
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        #stage {
+        margin: 50px auto 0;
+        padding: 30px 0 20px;
+        width: 410px;
+        background: #E0DEDA;
+        }
+        #stage #screen {
+        margin: 0 auto 15px;
+        width: 354px;
+        height: 80px;
+        background: #DFE9E9;
+        position: relative;
+        }
+        #stage #screen p {
+        width: 100%;
+        text-align: right;
+        position: absolute;
+        right: 10px;
+        }
+        #stage #screen p.text1 {
+        margin-bottom: 3px;
+        letter-spacing: 8px;
+        top: 10px;
+        }
+        #stage #screen p.text2 {
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 14px;
+        top: 35px;
+        }
+        #stage ul {
+        margin: 0 auto;
+        width: 354px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: center;
+        }
+
+        #stage ul li {
+        margin: 0 0 10px;
+        background: #FFF;
+        width: 62px;
+        height: 62px;
+        border-radius: 5px;
+        list-style: none;
+        line-height: 62px;
+        cursor: pointer;
+        }
+        #stage ul li:hover {
+        background: #eee;
+        }
+        #stage ul li:active {
+        border: #8ADDFD 2px solid;
+        box-sizing: border-box;
+        }
+        #stage ul li.colspan {
+        width: 134px;
+        }
+        .display { position: absolute; opacity: 0; }
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div id="stage">
+        <div id="screen">
+            <p class="text1"></p>
+            <p class="text2"></p>
+            <div class="display">
+                <span class="display__thousand"></span>
+                <span class="display__hundred"></span>
+                <span class="display__ten"></span>
+                <span class="display__first"></span>
+            </div>
+        </div>
+        <ul>
+            <li class="num">7</li>
+            <li class="num">8</li>
+            <li class="num">9</li>
+            <li id="ac" class="colspan clear">AC</li>
+            <li class="num">4</li>
+            <li class="num">5</li>
+            <li class="num">6</li>
+            <li id="waru">÷</li>
+            <li id="kake">×</li>
+            <li class="num">1</li>
+            <li class="num">2</li>
+            <li class="num">3</li>
+            <li class="minus" id="hiku">-</li>
+            <li class="plus" id="tasu">+</li>
+            <li class="colspan num">0</li>
+            <li id="ten">.</li>
+            <li class="equal colspan" id="wa">＝</li>
+        </ul>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
